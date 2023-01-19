@@ -21,6 +21,7 @@ body{
 }
 
 .container {
+    /* make the container responsive */
     position: absolute;
     top: 44%;
     left: 50%;
@@ -37,6 +38,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgb(255, 255, 255);
     border-width: 5px;
+    
 }
 .guest {
     display: flex;
@@ -77,4 +79,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+/* display items vertically in mobile view */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+    }
 }
